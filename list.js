@@ -3,7 +3,7 @@ if (typeof AUTO_TITLE != 'undefined' && AUTO_TITLE == true) {
 }
 
 if (typeof S3_REGION != 'undefined') {
-  var BUCKET_URL = location.protocol + '//' + location.hostname + '.' + S3_REGION + '.amazonaws.com'; // e.g. just 's3' for us-east-1 region
+  var BUCKET_URL = location.protocol + '//' + location.hostname + '.' + S3_REGION + '.0xdc.io'; // e.g. just 's3' for us-east-1 region
   var BUCKET_WEBSITE_URL = location.protocol + '//' + location.hostname;
 }
 
@@ -12,7 +12,7 @@ if (typeof S3BL_IGNORE_PATH == 'undefined' || S3BL_IGNORE_PATH != true) {
 }
 
 if (typeof BUCKET_URL == 'undefined') {
-  var BUCKET_URL = location.protocol + '//' + location.hostname;
+  var BUCKET_URL = location.protocol + '//' + location.hostname.replace("sites", "os");
 }
 
 if (typeof BUCKET_NAME != 'undefined') {
